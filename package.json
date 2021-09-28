@@ -1,0 +1,32 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "npx cypress open",
+    "cy:report": "yarn merge_reports && yarn mochawesome_report && yarn clean",
+    "merge_reports": "mochawesome-merge ./cypress/reports/*.json > ./cypress/reports/outreports/mochawesome.json",
+    "mochawesome_report": "marge -t Cypress_report, -f Cypress_Finixio_report ./cypress/reports/outreports/mochawesome.json",
+    "clean": "rm -rf ./cypress/reports/*.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thrashero1/cypress-test.git"
+  },
+  "author": "David Borg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thrashero1/cypress-test/issues"
+  },
+  "homepage": "https://github.com/Thrashero1/cypress-test#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "cypress": "^8.5.0"
+  }
+}

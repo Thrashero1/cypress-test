@@ -1,0 +1,16 @@
+{
+    "baseUrl": "https://kryptoszene.de/",
+    "numTestsKeptInMemory": 100, 
+    "reporter": "mochawesome",
+    "defaultCommandTimeout": 10000,
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "chromeWebSecurity": false,
+    "screenshotsFolder": "mochawesome-report/assets",
+    "reporterOptions": {
+        "reportDir": "./cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
+}
